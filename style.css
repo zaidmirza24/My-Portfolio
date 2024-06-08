@@ -303,6 +303,9 @@ nav ul li a:active {
     font-weight: 900;
     margin-bottom: 23px;
 }
+.project-heading h1 {
+    font-size: 4rem;
+}
 
 /* Project Card */
 .project-card-container {
@@ -314,6 +317,7 @@ nav ul li a:active {
     width: 70%;
     position: relative;
     left: 23px;
+    margin: auto;
 
 }
 
