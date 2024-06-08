@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 * {
     padding: 0px;
     margin: 0px;
     font-family: "Darker Grotesque", sans-serif;
     font-weight: 500;
     box-sizing: border-box;
-
 }
 
 .navbar {
+    position: sticky;
+    top: 0px;
+    z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,6 +24,7 @@
 nav {
     display: flex;
     align-items: center;
+    width: 100%;
     /* margin-right: 100px; */
 }
 
@@ -44,26 +48,43 @@ nav ul li a {
 
 }
 
+nav ul li:hover {
+    border-bottom: 1px solid white;
+}
+
+nav ul li a:active {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background-color: #2c2c2c;
+
+}
+
 .navbar h1 {
     font-size: 25px;
     font-weight: 800;
     margin-left: 23px;
     color: white;
 }
-.navbar .nav-ul{
+
+.navbar .nav-ul {
     position: absolute;
+    width: 100%;
+
     right: 80px;
 }
 
 /* Home Page  */
 
-.home-page {
+section{
+    width: 100%;
+}
+.home-page{
     height: calc(100vh - 4rem);
     background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "Arvo", serif;
+    width: 97%;
 }
 
 /* CSS for my name heading */
@@ -82,6 +103,7 @@ nav ul li a {
     transform: scale(1.2);
     transition: transform 2s;
 }
+
 .name-1st {
     display: flex;
     align-items: baseline;
@@ -98,6 +120,7 @@ nav ul li a {
 
 
 }
+
 .m-1 {
     font-size: 80px;
     font-weight: 500;
@@ -139,14 +162,14 @@ nav ul li a {
 
 /* Hamburger and Toggle */
 
-.hamburger{
+.hamburger {
     margin-right: 10px;
-    
+
 }
 
 .hamburger img {
     display: none;
-    margin-right: 0px; 
+    margin-right: 0px;
 }
 
 .toggle {
@@ -166,23 +189,32 @@ nav ul li a {
     flex-direction: column;
     color: white;
 }
-.cancel{
-       margin-left: -9px;
+
+.cancel {
+    margin-left: -9px;
 }
+
 /* Second Page */
-.second-page{
-    position:relative;
-        left: 25px;
-        width: 94%;
-        height: 100vh;
+.second-page {
+    position: relative;
+    left: 25px;
+    width: 100%;
+    height: 100%;
+
+
+
 }
-.about{
+
+.about {
     display: flex;
     flex-direction: column;
+    width: 100%;
+
+
     gap: 18px;
 }
 
-.about-heading{
+.about-heading {
     position: relative;
     left: 23px;
     display: flex;
@@ -191,57 +223,155 @@ nav ul li a {
     font-weight: 900;
     font-family: "Arvo", serif;
 }
-.about-heading h1{
+
+.about-heading h1 {
     font-size: 4rem;
 }
-.about-text{
-    width: 98%;
+
+.about-text {
+    width: 100%;
     position: relative;
     left: 23px;
     font-size: 20px;
     font-weight: 700;
 }
+
 /* Second page card */
-.card-container{
+.card-container {
     display: flex;
-    gap:12px;
+    gap: 12px;
     font-size: 14px;
     width: 90%;
     position: relative;
     left: 23px;
-    
+
 
 }
-.card{
+
+.card {
     border: 2px solid #2c2c2c2c;
     border-radius: 10px;
     box-shadow: 8px -8px #2c2c2c2c, 0em 0 0.4em #2c2c2c2c;
     width: 100%;
     padding: 12px;
 }
-.card-heading{
+
+.card-heading {
     font-size: 18px;
     font-weight: 900;
     padding-left: 5px;
     border-bottom: 2px solid black
 }
-.card-body{
+
+.card-body {
     display: flex;
     flex-wrap: wrap;
     padding: 0px 0px 0px 2px;
 }
-.card-capsule{
-    border: 1px solid blue;
+
+.card-capsule {
+    border: 1.5px solid blue;
     border-radius: 20px;
     padding: 1px 12px 1px 12px;
     margin: 8px;
 }
-.card p{
+
+.card p {
     font-size: 18px;
     font-weight: 500;
 
 }
+
+/* Projects-thirdPage */
+.third-page {
+    position: relative;
+    left: 25px;
+    top: 230px;
+    width: 94%;
+    /* height: 100vh; */
+}
+
+.project-heading {
+    position: relative;
+    left: 23px;
+    display: flex;
+    width: 98%;
+    gap: 2px;
+    font-weight: 900;
+    margin-bottom: 23px;
+}
+
+.project-heading h1 {
+    font-size: 4rem;
+}
+
+/* Project Card */
+.project-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    font-size: 14px;
+    width: 70%;
+    position: relative;
+    left: 23px;
+
+}
+
+.project-card {
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+
+    margin-bottom: 23px;
+    /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+}
+
+.project-card-heading {
+    font-size: 18px;
+    font-weight: 900;
+    padding-left: 10px;
+    border-bottom: 2px solid black
+}
+
+.project-card-body {
+    padding: 23px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.project-link {
+    position: relative;
+    left: 23px;
+
+}
+
+.project-link button {
+
+    border-radius: 10px;
+    border: none;
+    background-color: #0d1117;
+padding: 5px 10px 5px 10px;
+}
+
+.project-link a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+}
+
 /* Responsiveness Code for Nav-bar and my name heading  */
+@media only screen and (max-width: 1024px){
+    .project-card-container{
+        grid-template-columns: 1fr;
+    }
+    
+}
 @media only screen and (max-width: 750px) {
     .my-name {
         transform: scale(0.8);
@@ -254,14 +384,23 @@ nav ul li a {
     .navbar h1 {
         margin: 10px;
     }
-    .card-container{
+
+    .card-container {
         flex-direction: column;
     }
-    .card{
+
+    .card {
         width: 100%;
     }
-    .second-page{
+
+    .second-page {
         left: 20px;
+    }
+    .third-page{
+        top: 400px;
+    }
+    .project-card{
+        width: 100%;
     }
 
 
@@ -277,8 +416,11 @@ nav ul li a {
         display: none;
     }
 
+    .home-page{
+    width: 100%;
+    }
     .my-name {
-        transform: scale(0.7);
+        transform: scale(0.6);
     }
 
     .navbar h1 {
@@ -288,7 +430,12 @@ nav ul li a {
     .hamburger {
         display: flex;
     }
-    .second-page{
+    .nav-ul{
+        position: absolute;
+    right: 10px;
+    }
+
+    .second-page {
         left: 5px;
     }
 
