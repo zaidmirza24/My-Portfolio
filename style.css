@@ -25,13 +25,14 @@ nav {
     display: flex;
     align-items: center;
     /* width: 100%; */
-    /* margin-right: 100px; */
+    margin-right: 0px;
 }
 
 nav ul {
     display: flex;
     list-style: none;
     color: white;
+    margin-right: 0px;
 
 }
 
