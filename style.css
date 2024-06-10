@@ -91,7 +91,7 @@ nav ul li a:active {
     left: 0px;
     font-family: "Arvo", serif;
     font-weight: 1000;
-
+    
     position: relative;
     bottom: 50px;
     width: 100%;
@@ -99,13 +99,14 @@ nav ul li a:active {
     transition: transform 2s;
     grid-column: 2/3;
     grid-row: 2/3;
-}
-
-.name-1st {
-    display: flex;
-    align-items: baseline;
-    text-align: right;
-    margin-bottom: -51px;
+    }
+    
+    .name-1st {
+        display: flex;
+        align-items: baseline;
+        text-align: right;
+        margin-bottom: -51px;
+        font-family: "Audiowide", sans-serif;
 
 }
 
@@ -114,6 +115,7 @@ nav ul li a:active {
     align-items: baseline;
     text-align: right;
     margin-bottom: -51px;
+    font-family: "Audiowide", sans-serif;
 
 
 }
@@ -367,7 +369,66 @@ padding: 5px 10px 5px 10px;
     color: white;
     font-weight: 600;
 }
+/* Contact Page */
+.fourth-page{
+    position: relative;
+    top: 340px;
+    height: 50vh;
+}
+.contact{
+    border: 1px solid black;
+    width: 60%;
+    margin: auto;
+    padding: 5px 12px 5px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+.contact button{
+    border: none;
+    font-size: 15px;
+    font-weight: 800;
+    border-radius: 10px;
+    color: white;
+    background-color:#0d1117 ;
+    padding: 8px;
+}
+.contact-button{
+    margin-bottom: 12px;
+    margin-top: 8px;
+    padding-left: 20px;
 
+}
+.contact-text{
+    color: #727278 ;
+    padding: 0px 20px 0px 20px;
+    font-size: 13px;
+    }
+    
+/* Footer */
+.fifth-section{
+    position: relative;
+    top: 350px;
+}
+.footer{
+    margin: auto;
+    /* width: 50%; */
+}
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.social p{
+    font-size: 18px;
+}
+.copyRight-name{
+    display: flex;
+    justify-content: center;
+}
+.copyRight-name p{
+    font-size: 18px;
+}
 /* Responsiveness Code for Nav-bar and my name heading  */
 @media only screen and (max-width: 1024px){
     .project-card-container{
@@ -404,6 +465,12 @@ padding: 5px 10px 5px 10px;
     }
     .project-card{
         width: 100%;
+    }
+    .fourth-page{
+        top: 460px;
+    }
+    .fifth-section{
+        top: 450px;
     }
 
 
@@ -444,6 +511,18 @@ padding: 5px 10px 5px 10px;
     }
     .project-heading h1{
         font-size: 2.5rem ;
+    }
+    .fourth-page{
+        top: 500px;
+    }
+    .fifth-section{
+        top: 600px;
+    }
+    .social img{
+        width: 18px;
+    }
+    .social p{
+        font-size: 14px;
     }
 
 }
