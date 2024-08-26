@@ -157,7 +157,10 @@ nav ul li a:active {
     background: linear-gradient(45deg, rgb(199, 28, 28), #66347f, #a7f, #e8a0bf, #66347f);
     background-size: 200%;
     background-clip: text;
-    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   
+    /* color: transparent; */
 }
 
 /* Hamburger and Toggle */
